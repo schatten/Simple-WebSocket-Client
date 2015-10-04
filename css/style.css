@@ -1,69 +1,127 @@
 body {
 	width: 100%;
-	font-family: font-family:'ÉqÉâÉMÉmäpÉS Pro W3','Hiragino Kaku Gothic Pro','ÉÅÉCÉäÉI',Meiryo,'ÇlÇr ÇoÉSÉVÉbÉN',sans-serif;
-	color: #000;
-	background-color: #eee;
-	font-size: 10pt;
+	color: #333;
+	background-color: #CADBE3;
+	font-size: 16px;
 }
 
-fieldset {
-	margin-bottom: 10px;
-	padding: 5px 10px;
-	border: 1px solid #777;
+div.content {
+	width: 800px;
+	margin: 0 auto;
+
+	box-sizing: content-box;
 }
 
-legend {
-	padding: 0 5px;
-	color: #777;
-	font-size: 11pt;
-	font-weight: bold;
-}
-
-label {
-	color: #777;
-	font-weight: bold;
-}
-
-#connectionStatus {
-	font-weight: bold;
-}
-
-#content {
-	padding: 10px;
-}
-
-#serverUrl {
-	width: 225px;
-	padding: 1px 3px;
-	border: 1px solid #999;
-}
-
-#disconnectButton {
-	display: none;
-}
-
-#requestArea textarea {
-	min-width: 300px;
-	height: 2em;
-	padding: 0 3px;
-	line-height: 150%;
-}
-
-#messages {
-	height: 300px;
+div.url-box {
+	padding: 0;
 	margin: 5px 0;
-	padding: 0 5px;
-	overflow: auto;
-	border: 1px dotted #777;
-	background-color: #fff;
-	line-height: 150%;
 }
 
-#messages pre {
+input#serverUrl {
+	width: 698px;
+}
+
+.padded-input-url {
+	font-size: 1em;
+	padding: 10px;
+	width: 100px;
+	border: 0px solid transparent;
+}
+
+.border-box {
+	box-sizing: border-box;
+}
+
+button.url-button-open {
+	background-color: #6E8A66;
+	color: #eee;
+}
+
+button.url-button-open:hover {
+	background-color: #76A668;
+	cursor: pointer;
+}
+
+button.url-button-close {
+	background-color: #B05454;
+	color: #eee;
+}
+
+button.url-button-close:hover {
+	background-color: #CF5151;
+	cursor: pointer;
+}
+
+div.input-message-box {
+	padding: 0;
+	margin: 5px 0;
+}
+
+
+/* Message compose styling */
+div#editor-view textarea#sendMessage {
+	font-family: monospace;
+	font-size: 0.85em;
+	padding: 10px;
+
+	height: 300px;
 	width: 100%;
-	color: #000;
+	box-sizing: border-box;
+
+	border: 0px solid transparent;
 }
 
-#messages pre.sent {
-	color: #f63;
+div#editor-view div.composer {
+	box-sizing: border-box;
+	vertical-align: top;
+	width: 380px;
+	display: inline-block;
 }
+
+div#editor-view div.message-container {
+	box-sizing: border-box;
+	width: 380px;
+	display: inline-block;
+	vertical-align: top;
+}
+
+div#editor-view div.message-actions {
+	text-align: right;
+}
+
+button#sendButton {
+	background-color: #357EA6;
+	color: #eee;
+	font-size: 1em;
+	padding: 10px;
+	width: 100px;
+	border: 0px solid transparent;
+}
+
+button#sendButton:hover {
+	background-color: #5394B8;
+	cursor: pointer;
+}
+
+/* Message div styling */
+div#messages {
+	box-sizing: border-box;
+	padding: 10px;
+	font-size: 0.85em;
+}
+
+a#clearMessage {
+	display: inline-block;
+	padding: 5px;
+	float: right;
+	background: rgba(255, 255, 255, 0.75);
+  color: rgba(176, 84, 84, 0.75);
+  border-radius: 0 0 3px 3px;
+  text-decoration: none;
+	font-size: 1em;
+}
+
+a#clearMessage:hover {
+	background: rgba(255, 255, 255, 0.95);
+	color: #CF5151;
+	cursor: pointer;

@@ -1,42 +1,52 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta charset="utf-8"/>
-	<title>Simple Web Socket Client</title>
-	<link rel="stylesheet" type="text/css" href="css/reset.css"/>
-	<link rel="stylesheet" type="text/css" href="css/style.css"/>
-</head>
-<body>
-<div id="content">
-	<fieldset>
-		<legend>Server Location</legend>
-		<div>
-			<label>URL:</label>
-			<input type="text" id="serverUrl" value="ws://"/>
-			<button id="connectButton">Open</button>
-			<button id="disconnectButton">Close</button>
+	<head>
+		<meta charset="utf-8"/>
+		<title>Simple Web Socket Client</title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+		<link rel="stylesheet" type="text/css" href="css/tabcontent.css"/>
+		
+	</head>
+	<body>
+		<div class="content">
+			<div class="url-box">
+				<input class="padded-input-url border-box" type="text" id="serverUrl" value="ws://" 
+							 placeholder="Socket URL (ws://...)"/><button class="padded-input-url border-box url-button-open" 
+							 id="connectButton">open</button>	
+			</div>
+
+			<div class="tabs">
+				<ul class="tabs">
+					<li><a href="#editor-view">Editor View</a></li>
+					<li><a href="#frames-view">Frames View</a></li>
+				</ul>
+			</div>
+
+			<div class="tabcontents">
+				<div id="editor-view">
+					<div class="composer">
+						<textarea id="sendMessage"></textarea>
+						<div class="message-actions">
+							<button id="sendButton">Send</button>
+						</div>
+					</div>
+
+					<div class="message-container">
+						<a href="#" id="clearMessage">Clear</a>
+						<div id="messages">
+						</div>
+					</div>
+				</div>
+
+				<div id="frames-view">
+					This will contain the frames view that allows you to inspect past frames with ease!
+				</div>
+			</div>
 		</div>
-		<div>
-			<label>Status:</label>
-			<span id="connectionStatus">CLOSED</span>
-		</div>
-	</fieldset>
-	<fieldset id="requestArea">
-		<legend>Request</legend>
-		<div>
-			<textarea id="sendMessage" disabled="disabled"></textarea>
-		</div>
-		<div>
-			<button id="sendButton" disabled="disabled">Send</button>
-			[Shortcut] Ctr + Enter
-		</div>
-	</fieldset>
-	<fieldset id="messageArea">
-		<legend>Message Log <button id="clearMessage">Clear</button></legend>
-		<div id="messages"></div>
-	</fieldset>
-</div>
-<script type="text/javascript" src="lib/jquery-1.4.3.min.js"></script>
-<script type="text/javascript" src="index.js"></script>
-</body>
+
+		<script type="text/javascript" src="lib/jquery-1.4.3.min.js"></script>
+		<script type="text/javascript" src="index.js"></script>
+		<script type="text/javascript" src="lib/tabcontent.js"></script>
+	</body>
 </html>
