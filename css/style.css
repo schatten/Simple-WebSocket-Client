@@ -125,3 +125,12 @@ a#clearMessage:hover {
 	background: rgba(255, 255, 255, 0.95);
 	color: #CF5151;
 	cursor: pointer;
+}
+
+div#messages pre {
+	color: #519E2E;
+}
+
+div#messages pre.sent {
+	color: #CC7C27;
+}
